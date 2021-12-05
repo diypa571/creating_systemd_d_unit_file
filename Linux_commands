@@ -1,4 +1,4 @@
-// Diypar
+// Diypar Parwana
 sudo cp linkvader.sh /usr/bin/linkvader.sh
 sudo chmod +x /usr/bin/linkvader.sh
 sudo cp linkvader.service /etc/systemd/system/linkvader.service
