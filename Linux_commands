@@ -1,0 +1,30 @@
+// Diypar
+sudo cp linkvader.sh /usr/bin/linkvader.sh
+sudo chmod +x /usr/bin/linkvader.sh
+sudo cp linkvader.service /etc/systemd/system/linkvader.service
+sudo chmod 644 /etc/systemd/system/linkvader.service
+sudo systemctl start linkvader
+sudo systemctl status linkvader
+
+sudo systemctl stop linkvader
+sudo systemctl restart linkvader
+sudo systemctl enable linkvader
+sudo systemctl status linkvader
+
+
+sudo cp linkvader.timer /etc/systemd/system/linkvader.timer
+
+systemctl daemon-reload
+systemctl status linkvader.timer
+systemctl status linkvader.timer
+
+sudo systemctl enable linkvader.timer
+systemctl start linkvader.timer
+systemctl status linkvader.timer
+
+
+
+
+
+
+ 

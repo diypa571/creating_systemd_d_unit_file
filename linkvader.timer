@@ -1,0 +1,13 @@
+[Unit]
+Description=Linköpings Väder Prognoser.
+Requires=linkvader.service
+
+[Timer]
+Unit=linkvader.service
+OnBootSec=1hour
+OnCalendar=hourly
+Persistent=true 
+
+[Install]
+WantedBy=timers.target
+

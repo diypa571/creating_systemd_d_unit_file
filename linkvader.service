@@ -1,0 +1,16 @@
+[Unit]
+Description=Linköpings Väder Prognoser.
+After=network.target
+Wants=network-online.target
+
+[Timer]
+OnBootSec=1hour
+OnUnitActiveSec=1hour
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/bin/linkvader.sh
+ExecStartPre=/bin/mkdir -p /var/log/linkvader
+
+[Install]
+WantedBy=multi-user.target
